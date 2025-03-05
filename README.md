@@ -1,40 +1,49 @@
-# Global Company Layoffs
+# Global Company Layoffs - Data Cleaning & Analysis
 
 ## 📌 Project Overview
-This project focuses on cleaning and analyzing a dataset of global company layoffs using SQL. The dataset includes information on companies, industries, locations, and layoff statistics.
+This project focuses on analyzing global company layoffs using SQL. The dataset contains information about layoffs across various industries, locations, and time periods. The goal is to **clean, transform, and analyze** the data to uncover insights about layoffs trends.
 
-## 🗂 Dataset Information
-The dataset contains the following columns:
-- `company`: Name of the company
-- `location`: Location of the company
-- `industry`: Industry sector
-- `total_laid_off`: Number of employees laid off
-- `percentage_laid_off`: Percentage of workforce affected
-- `date`: Layoff date
-- `stage`: Company growth stage
-- `country`: Country of operation
-- `funds_raised_millions`: Total funds raised (in millions)
+## 📂 Dataset Information
+The dataset includes:
+- Company Name
+- Location & Country
+- Industry
+- Total Employees Laid Off
+- Percentage Laid Off
+- Date of Layoff
+- Company Stage
+- Funds Raised (in Millions)
 
-## 🔧 Data Cleaning Steps
-The data cleaning process involved:
-1. **Removing Duplicates** - Identified and removed duplicate records.
-2. **Standardizing Data** - Trimmed extra spaces, fixed inconsistent naming.
-3. **Handling Missing Values** - Filled missing industry data using existing company information.
-4. **Formatting Dates** - Converted date column from text to a proper `DATE` format.
-5. **Dropping Unnecessary Columns** - Removed unwanted columns after processing.
+## 🛠️ Data Cleaning Steps
+The dataset was cleaned using SQL through the following steps:
+1. **Removed Duplicates:** Identified and eliminated duplicate records.
+2. **Standardized Data:** Fixed inconsistencies in company names, industry names, and country formatting.
+3. **Converted Date Format:** Changed date values to a proper `DATE` format.
+4. **Handled Null & Missing Values:** Replaced missing values using logical replacements and removed incomplete records.
+5. **Dropped Unnecessary Columns:** Removed extra columns after cleaning.
 
-## 📜 SQL Queries
-All SQL scripts used for cleaning the dataset are stored in the **SQL folder**.
 
-## 🚀 How to Use
-To run the SQL queries:
-1. Load the dataset into your database.
-2. Use the provided SQL scripts to clean and standardize the data.
-3. Analyze the cleaned dataset for insights.
-.
+## 📊 Exploratory Data Analysis (EDA)
+After cleaning, an exploratory data analysis (EDA) was conducted to extract meaningful insights:
 
-## 🏷 Technologies Used
-- **SQL**
-- **MySQL**
-- **Data Cleaning & Analysis**
+### 🔍 Key Analysis:
+- **Total Layoffs & Percentage Analysis:**
+  - Identified the maximum number of employees laid off in a single event.
+  - Found companies with a 100% layoff rate.
+- **Industry & Country Insights:**
+  - Determined the industries and countries most affected by layoffs.
+- **Trends Over Time:**
+  - Analyzed layoffs by year and month to observe trends.
+- **Top Companies by Layoffs:**
+  - Ranked companies based on total layoffs across different years.
 
+## 📈 Insights & Findings
+- The **tech industry** experienced the highest number of layoffs.
+- The **United States** had the most layoffs compared to other countries.
+- Layoffs peaked during certain years, reflecting economic downturns or market shifts.
+- Some companies had **100% layoffs**, shutting down entirely.
+
+
+## 🏆 Future Improvements
+- **Data Visualization**: Create dashboards in Power BI or Python for better representation.
+- **Predictive Analysis**: Use ML models to predict future layoffs based on trends.
